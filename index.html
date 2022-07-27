@@ -1,0 +1,212 @@
+<html>
+<!DOCTYPE html>
+<HTML LANG="EN">
+<head>
+   <title>OXFAM ONLINE</title>
+</head> 
+<body>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWlG2r2MPNM4mii0wVeBGBaTVg739MJ5DG6w&usqp=CAU" alt="">
+       
+  <nav aria-label="Main Site Links."      class="nav">
+    <ul>      
+      <li><a href="#footer"><b>Contact</b></a></li> 
+      <li><a href="#Video"><b>Video</b></a></li>      
+      <li><a href="#About-me"><b>About Me</b></a></li>
+      <li> <a href="https://onlineshop.oxfam.org.uk/"><b>Oxfam online shop</b></a></li>
+   </ul>
+ </nav>
+<header class="header">
+  <h1  class="c-site-header green-text">
+    Bahare
+  </h1>
+  <h2 class="green-text" >
+    A Volunteer in Oxfam Online Shop
+  </h2> 
+   <img id="pic" src="https://thumbs.dreamstime.com/z/yellow-gerbera-flower-3434173.jpg
+" width="350"/>
+<br><br>
+ 
+<button id="pervious"> pervious </button>
+<button id="next"> next</button>
+  <div id="About-me" class="About-me" ><h3>About Me :</h3></div>
+  </header>
+  <main>
+  <p class="p">
+    I am a member of oxfam online shop team. Every day our team of volunteers list hundreds of items donated by supporters , including second-hand women’s clothing, second-hand men’s clothing and a range of one-off collectables. Not to mention our second-hand home wares, vintage wedding dresses, vinyl, music, books, seasonal favourites like Fair Trade Christmas cards and more.</p>
+  <p class="p"> This Opportunity gave me valuable experience and skills in e-commerce, warehouse management, customer service, photography etc.</p>
+  <p class="p"> If you are intrested in joining our team to have fun and improve your skills please contact me .</p>
+    <p class="p"> whatch a video about Oxfam online shop below:</p>
+
+  <div class="Video" id="Video">
+    <iframe id="iframe"            src="https://www.youtube.com/embed/o00I74xzvbY">          </iframe>         
+  
+  </div>
+  </main>
+
+
+  <footer>
+<div id="footer" class="c-site-footer">          <br><b>Contact:<br><br>E-mail:itxbb09@gmail.com</b><br><br>
+  </div>
+  </footer> 
+
+<!-- Your test console.
+Don't delete!-->
+<aside id="tests" aria-label="Test Readout." aria-live="polite" style="overflow:auto">
+ 
+ 
+</aside>
+  </body>
+  html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+/* don't edit this */
+.jest-lite-report__status--pass {
+  background: var(--color-pass);
+}
+.jest-lite-report__errors { display:none }
+
+   
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  }
+
+li {
+  float: right;
+  font-size:25px;
+  }
+
+a {
+  display: block;
+  padding: 30px;  
+  background-color: #dddddd;
+  font-size:25px;
+}
+.p{
+    font-size: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    line-height: 1.5;
+      }
+.nav{
+  background-repeat:repeat-x;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-6zAJjy5JXAoMzjkOVD031U97apMMWgJse_vp2djBDb_n03McZleiChmMQZ82oWvDh9U&usqp=CAU"); 
+background-size: 97px;}
+
+#iframe{
+  margin-left: 330px;
+  width:550px;
+  height:300px;
+  }
+#pic{
+  margin-left: 330px;
+  width:600px;
+  height:350px;
+  }
+#next{
+  margin-left: 50px;  
+  }
+#pervious{
+  margin-left: 400px;
+  
+  }
+
+.header{
+  margin-left: 50px;
+}
+.green-text{
+  color:green;
+           }   
+
+#footer{
+    display:flex;
+    justify-content: center;    
+    background-color: #45a1ff;
+    color: #fff;
+    font-size:30px; 
+    border-radius: 25px;
+    padding: 40px; 
+       }
+       const {
+  core: { test, expect, run },
+  prettify
+} = window.jestLite;
+
+/* =================
+  FIND ELEMENTS
+  These are all the elements we will look for.
+   ===================
+*/
+const getHeader = document.querySelectorAll("header"),
+  getH1 = document.querySelectorAll("h1"),
+  getSiteHeader = document.querySelectorAll(".c-site-header"),
+  getAria = document.querySelectorAll('nav[aria-label="Main Site Links."]'),
+  getMain = document.querySelectorAll("main"),
+  getFooter = document.querySelectorAll("footer"),
+  getSiteFooter = document.querySelectorAll(".c-site-footer"),
+  getIFrame = document.querySelectorAll("iframe"),
+  getImage = document.querySelectorAll("img"),
+  getWords = document.body.innerText;
+
+/* =================
+   ASSERTIONS 
+   These are the things we check are true about your page.
+   Read and update your HTML to discover the requirements.
+   The tests will run every time you update your code.
+   ===================
+*/
+test("There is at least one header element", () => {
+  expect(getHeader.length).toBeGreaterThanOrEqual(1);
+});
+test("There is at least one h1", () => {
+  expect(getH1.length).toBeGreaterThanOrEqual(1);
+});
+test("There is only one header element with the class c-site-header", () => {
+  expect(getSiteHeader.length).toBe(1);
+});
+test("There is a nav element with an aria-label of Main Site Links.", () => {
+  expect(getAria.length).toBeGreaterThanOrEqual(1);
+});
+test("There is only one main element", () => {
+  expect(getMain.length).toBe(1);
+});
+test("There is at least one footer element", () => {
+  expect(getFooter.length).toBeGreaterThanOrEqual(1);
+});
+test("There is only one footer element with the class c-site-footer", () => {
+  expect(getSiteFooter.length).toBe(1);
+});
+test("There is embedded video", () => {
+  expect(getIFrame.length).toBeGreaterThanOrEqual(1);
+});
+test("There is at least one image", () => {
+  expect(getImage.length).toBeGreaterThanOrEqual(1);
+});
+test("There are at least 500 words on the page", () => {
+  expect(getWords.length).toBeGreaterThanOrEqual(500);
+});
+
+const console = document.getElementById("tests");
+prettify.toHTML(run(), console);
+
+
+var srcs;
+
+srcs = ['https://www.realgifts.co.uk/wp-content/uploads/2014/05/oxfam-online-shop-2021.jpg', 
+'http://d2clgeqocjw7k2.cloudfront.net/59e5c69620e0cd0400c85a8c/frame_0000.png', 'https://www.thestar.co.uk/images-a.jpimedia.uk/imagefetch/http://www.thestar.co.uk/webimage/Prestige.Item.1.82906677!image/image.jpg?width=640&quality=65&smart'];
+
+
+document.getElementById('next').addEventListener('click', (event) => {
+  srcs.push(srcs.shift());
+  let element_pic = document.getElementById('pic');
+  element_pic.setAttribute("src", srcs[0]);
+
+});
+
+
+</html>
